@@ -1,22 +1,11 @@
-<script setup>
-import { computed } from 'vue'
-import { useStore } from 'vuex'
-
-const store = useStore()
-const stack = computed(() => {
-    return store.state.stack
-})
-</script>
+<script setup></script>
 
 <template>
-    <nav class="relative flex items-center justify-center capitalize text-lg pt-24">
+    <nav class="relative flex items-center justify-center capitalize text-lg pt-6">
         <router-link class="inline pr-5" to="/" active-class="active">Home</router-link>
         <router-link class="inline" to="/about" active-class="active">About</router-link>
     </nav>
-    <router-view class="p-24"></router-view>
-    <footer>
-        <p class="text-gray-400 text-xs text-center">Vue 3.0, Vite, Tailwind CSS</p>
-    </footer>
+    <router-view class="p-12"></router-view>
 </template>
 
 <style lang="scss">
@@ -29,8 +18,8 @@ nav {
         &::after {
             @apply block w-full bg-green-500;
             content: '';
-            height: 1.5px;
-        }
+           height: 1.5px;
+            }
     }
 }
 </style>
